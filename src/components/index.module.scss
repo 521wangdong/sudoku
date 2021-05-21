@@ -1,0 +1,85 @@
+.sudo-table-container{
+    padding:20px;
+    font-size: 16px;
+    box-sizing: border-box;
+    .row{
+        display:flex;
+        width: min-content;
+        border-left:4px solid #333;
+        border-right:4px solid #333;
+        box-sizing: border-box;
+        .cell{
+            width:60px;
+            text-align: center;
+            vertical-align: middle;
+            height:60px;
+            line-height:60px;
+            box-sizing: border-box;
+            border-right:1px solid #333;
+            border-bottom:1px solid #333;
+            color:#333333;
+            font-weight:500;
+            &:last-of-type{
+                border-right:none;
+            }
+            &:nth-child(3n){
+                border-right:4px solid #333;
+            }
+            &:last-child{
+                border-right:none;
+            }
+        }
+        &:last-of-type{
+            border-bottom:4px solid #333;
+            .cell{
+                border-bottom:none;
+            }
+        }
+        &:first-of-type{
+            border-top:4px solid #333;
+        }
+        &:nth-child(3n){
+            border-bottom:4px solid #333;
+            .cell{
+                border-bottom:none;
+            }
+        }
+        .selected{
+            background-color:#ddd;
+            color:#40a9ff;
+        }
+        .fill-num{
+            color:#666666;
+            font-weight:normal;
+            font-size:0.5rem;
+        }
+        
+    }
+}
+
+.key-board-container{
+    width: 180px;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .item{
+        width:60px;
+        height:60px;
+        line-height:60px;
+        font-size: 16px;
+        border:1px solid #ccc;
+        box-sizing: border-box;
+        color:#666666;
+        &:last-of-type{
+            border-right:1px solid #ccc;
+        }
+        &:hover{
+            color:#40a9ff;
+            border:1px solid #40a9ff;
+        }
+        &[disabled]:hover{
+            color:#666666;
+            border:1px solid #ccc;
+        }
+    }
+}
